@@ -1,1 +1,89 @@
-"Welcome to Contoso Master Data Management" 
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+
+export default function ContosoHomePage() {
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+
+  return (
+    <div className="font-sans text-gray-800">
+      {/* Header */}
+      <header className="bg-white shadow p-6 flex justify-between items-center">
+        <h1 className="text-2xl font-bold">Contoso</h1>
+        <nav className="space-x-4">
+          <a href="#about" className="hover:underline">About</a>
+          <a href="#services" className="hover:underline">Services</a>
+          <a href="#testimonials" className="hover:underline">Testimonials</a>
+          <a href="#contact" className="hover:underline">Contact</a>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="bg-gray-100 py-20 text-center">
+        <h2 className="text-4xl font-bold mb-4">Empowering Your Digital Transformation</h2>
+        <p className="text-lg max-w-xl mx-auto">
+          Contoso is a leading tech consulting firm helping businesses thrive in the digital era.
+        </p>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-16 px-6 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-3xl font-semibold mb-4">About Us</h3>
+          <p>
+            At Contoso, we bring together deep industry expertise and innovative solutions to help organizations transform and grow. Our mission is to deliver measurable value through strategic consulting and cutting-edge technology.
+          </p>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-16 px-6 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <h3 className="text-3xl font-semibold text-center mb-10">Our Services</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { title: "Cloud Strategy", desc: "Modernize your infrastructure and scale with our tailored cloud solutions." },
+              { title: "Data & Analytics", desc: "Unlock insights and drive decisions with intelligent analytics." },
+              { title: "Digital Innovation", desc: "Accelerate growth through user-centric applications and platforms." }
+            ].map((s, i) => (
+              <Card key={i}>
+                <CardContent className="p-6">
+                  <h4 className="text-xl font-semibold mb-2">{s.title}</h4>
+                  <p>{s.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section id="testimonials" className="py-16 px-6 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-3xl font-semibold mb-10">What Our Clients Say</h3>
+          <p className="italic">"Contoso's team helped us streamline our operations and deliver a seamless digital experience to our customers. Their expertise is unmatched."</p>
+          <p className="mt-4 font-medium">— Jane Doe, CEO of Fabrikam</p>
+        </div>
+      </section>
+
+      {/* Contact Form */}
+      <section id="contact" className="py-16 px-6 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h3 className="text-3xl font-semibold text-center mb-8">Get in Touch</h3>
+          <form className="grid gap-4">
+            <Input placeholder="Your Name" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} />
+            <Input type="email" placeholder="Your Email" value={formData.email} onChange={e => setFormData({ ...formData, email: e.target.value })} />
+            <textarea className="border rounded p-2 h-32" placeholder="Your Message" value={formData.message} onChange={e => setFormData({ ...formData, message: e.target.value })}></textarea>
+            <Button>Send Message</Button>
+          </form>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-white text-center p-6 text-sm text-gray-500">
+        © 2025 Contoso Company. All rights reserved.
+      </footer>
+    </div>
+  );
+}
