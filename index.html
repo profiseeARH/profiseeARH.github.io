@@ -3,73 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contoso Corporation</title>
+  <title>Contoso Data Governance</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="font-sans text-gray-800">
   <!-- Header -->
   <header class="bg-white shadow p-6 flex justify-between items-center">
-    <h1 class="text-2xl font-bold">Contoso Corporation</h1>
+    <h1 class="text-2xl font-bold">Contoso</h1>
     <nav class="space-x-4">
-      <a href="#about" class="hover:underline">About</a>
-      <a href="#services" class="hover:underline">Services</a>
-      <a href="#testimonials" class="hover:underline">Testimonials</a>
+      <a href="#overview" class="hover:underline">Overview</a>
+      <a href="#principles" class="hover:underline">Principles</a>
+      <a href="#framework" class="hover:underline">Framework</a>
       <a href="#contact" class="hover:underline">Contact</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="bg-gray-100 py-20 text-center">
-    <h2 class="text-4xl font-bold mb-4">Empowering Your Digital Transformation</h2>
-    <p class="text-lg max-w-xl mx-auto">
-      Contoso is a leading manufacturing firm helping businesses thrive in the digital era.
+    <h2 class="text-4xl font-bold mb-4">Data Management & Governance at Contoso</h2>
+    <p class="text-lg max-w-2xl mx-auto mb-6">
+      Ensuring data integrity, security, and compliance to power trustworthy decision-making and digital innovation.
     </p>
+    <img src="https://via.placeholder.com/600x300?text=Data+Governance+at+Contoso" alt="Data Governance Hero Diagram" class="mx-auto rounded shadow" />
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-16 px-6 bg-white">
+  <!-- Overview -->
+  <section id="overview" class="py-16 px-6 bg-white">
     <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-3xl font-semibold mb-4">About Us</h3>
-      <p>
-        At Contoso, we bring together deep industry expertise and innovative solutions to help organizations transform and grow. Our mission is to deliver measurable value through cutting-edge products.
+      <h3 class="text-3xl font-semibold mb-4">Overview</h3>
+      <p class="mb-6">
+        Contoso's data governance strategy ensures high-quality, trusted data assets across the enterprise. We define clear ownership, accountability, and stewardship models to align with regulatory, operational, and analytical needs.
       </p>
+      <img src="https://via.placeholder.com/500x250?text=Overview+Diagram" alt="Overview Diagram" class="mx-auto rounded shadow" />
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="py-16 px-6 bg-gray-50">
+  <!-- Governance Principles -->
+  <section id="principles" class="py-16 px-6 bg-gray-50">
     <div class="max-w-5xl mx-auto">
-      <h3 class="text-3xl font-semibold text-center mb-10">Our Services</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <h3 class="text-3xl font-semibold text-center mb-10">Core Principles</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="bg-white rounded-lg shadow p-6">
-          <h4 class="text-xl font-semibold mb-2">Cloud Strategy</h4>
-          <p>Modernize your infrastructure and scale with our tailored cloud solutions.</p>
+          <h4 class="text-xl font-semibold mb-2">Data Ownership</h4>
+          <p>Each data domain has a designated owner responsible for data quality and compliance.</p>
         </div>
         <div class="bg-white rounded-lg shadow p-6">
-          <h4 class="text-xl font-semibold mb-2">Data & Analytics</h4>
-          <p>Unlock insights and drive decisions with intelligent analytics.</p>
+          <h4 class="text-xl font-semibold mb-2">Data Quality</h4>
+          <p>All data must be accurate, complete, timely, and consistent across systems.</p>
         </div>
         <div class="bg-white rounded-lg shadow p-6">
-          <h4 class="text-xl font-semibold mb-2">Digital Innovation</h4>
-          <p>Accelerate growth through user-centric applications and platforms.</p>
+          <h4 class="text-xl font-semibold mb-2">Data Security & Privacy</h4>
+          <p>Data is protected through role-based access, encryption, and compliance with privacy laws.</p>
         </div>
+        <div class="bg-white rounded-lg shadow p-6">
+          <h4 class="text-xl font-semibold mb-2">Accountability</h4>
+          <p>Clear roles and responsibilities are defined across data stewards, custodians, and users.</p>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <img src="https://via.placeholder.com/600x300?text=Governance+Principles+Chart" alt="Governance Principles Chart" class="mx-auto rounded shadow" />
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials" class="py-16 px-6 bg-white">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-3xl font-semibold mb-10">What Our Clients Say</h3>
-      <p class="italic">"Contoso's team helped us streamline our operations and deliver a seamless digital experience to our customers. Their expertise is unmatched."</p>
-      <p class="mt-4 font-medium">— Jane Doe, CEO of Fabrikam</p>
+  <!-- Governance Framework -->
+  <section id="framework" class="py-16 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <h3 class="text-3xl font-semibold text-center mb-10">Data Governance Framework</h3>
+      <p class="mb-6 text-center">
+        Our framework spans strategy, processes, people, and technology to embed data governance across the organization.
+      </p>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Governance Council:</strong> Strategic oversight and policy direction.</li>
+        <li><strong>Data Stewards:</strong> Responsible for data quality, lineage, and standards.</li>
+        <li><strong>Policies & Standards:</strong> Define acceptable use, quality metrics, and compliance.</li>
+        <li><strong>Metadata Management:</strong> Ensures understanding and traceability of data assets.</li>
+        <li><strong>Technology Enablement:</strong> Tools and platforms that support data lineage, cataloging, and governance workflows.</li>
+      </ul>
+      <div class="text-center mt-10">
+        <img src="https://via.placeholder.com/700x400?text=Data+Governance+Framework+Model" alt="Data Governance Framework Model" class="mx-auto rounded shadow" />
+      </div>
     </div>
   </section>
 
-  <!-- Contact Form -->
+  <!-- Contact Section -->
   <section id="contact" class="py-16 px-6 bg-gray-50">
     <div class="max-w-3xl mx-auto">
-      <h3 class="text-3xl font-semibold text-center mb-8">Get in Touch</h3>
+      <h3 class="text-3xl font-semibold text-center mb-8">Contact the Data Governance Team</h3>
       <form class="grid gap-4">
         <input type="text" placeholder="Your Name" class="border rounded p-2" />
         <input type="email" placeholder="Your Email" class="border rounded p-2" />
